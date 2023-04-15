@@ -3738,6 +3738,12 @@ MonoBehaviour:
   - {fileID: -7041433825405162846, guid: c1276c2823df8994580427ad43c15d0e, type: 3}
   optionsBottom:
   - {fileID: -2112048012343372085, guid: 7472d990388783640aeb37bb2556acda, type: 3}
+  - {fileID: -4543370147599685623, guid: 095bd7b9c61de4744bb8e86c5087a217, type: 3}
+  - {fileID: -4543370147599685623, guid: bdea8c233a3f27441a18d2ca6f901383, type: 3}
+  - {fileID: -4543370147599685623, guid: f54289e47e6780b4ba47cea02c163ae7, type: 3}
+  - {fileID: -4543370147599685623, guid: 55f4d2fbc72485e49815900c65e6b115, type: 3}
+  - {fileID: -4543370147599685623, guid: 76f390f35a0b8d74fb2c3c23ae55ddca, type: 3}
+  - {fileID: -4543370147599685623, guid: 8574acdf840c64642a752673c03b8bd8, type: 3}
   optionsShoe:
   - {fileID: 1882850312941290735, guid: 5a4d74b8bb042b44eae77538c2278d29, type: 3}
   optionsFace:
