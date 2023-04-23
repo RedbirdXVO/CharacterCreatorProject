@@ -6,7 +6,7 @@ public class SceneScript : MonoBehaviour
 {
     public GameObject player;
     private PlayerScript playerScript;
-    private float[] colors = { 0, 0, 0};
+    public float[] colors = { 0, 0, 0};
     // Start is called before the first frame update
     void Start()
     {

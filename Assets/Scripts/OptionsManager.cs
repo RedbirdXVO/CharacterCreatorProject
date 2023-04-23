@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OutfitChanger : MonoBehaviour
+public class OptionsManager : MonoBehaviour
 {
     public SpriteRenderer bodyBase;
     public SpriteRenderer bodyBottom;
@@ -17,16 +17,15 @@ public class OutfitChanger : MonoBehaviour
     public List<SpriteObject> optionsFace = new List<SpriteObject>();
     public List<SpriteObject> optionsHair = new List<SpriteObject>();
     public List<SpriteObject> optionsTop = new List<SpriteObject>();
-    // Start is called before the first frame update
-    private int currentBaseOption = 0;
-    private int currentBottomOption = 0;
-    private int currentShoeOption = 0;
-    private int currentFaceOption = 0;
-    private int currentHairOption = 0;
-    private int currentTopOption = 0;
-    //public SpriteObject spriteObject;
+    public int currentBaseOption = 0;
+    public int currentBottomOption = 0;
+    public int currentShoeOption = 0;
+    public int currentFaceOption = 0;
+    public int currentHairOption = 0;
+    public int currentTopOption = 0;
     private int[] directions = { 0, 1, 2, 3 };
     private int currentDirection = 0;
+
     public void NextTopOption()
     {
         currentTopOption++;
