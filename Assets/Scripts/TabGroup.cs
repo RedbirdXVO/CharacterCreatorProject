@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +18,14 @@ public class TabGroup : MonoBehaviour
     public TabButton selectedTab;
     public List<GameObject> objectsToSwap;
 
+    //Color Tab Swapping
+    public string objName;
+    public bool isColorTab;
+    private string tabName;
 
+
+
+    [SerializeField] public GameObject sceneManager;
 
     // Adds button to list
     public void Subscribe(TabButton button)
@@ -33,6 +41,12 @@ public class TabGroup : MonoBehaviour
 
     void Start()
     {
+        objName = gameObject.name;
+        //Determine if this is the color tabgroup
+
+        if(objName == "ColorTabGroup")  {isColorTab = true;}
+        else                            {isColorTab = false;}
+
     }
     public void OnTabEnter(TabButton button)
     {
@@ -56,9 +70,9 @@ public class TabGroup : MonoBehaviour
         ResetTabs();
         button.background.color = tabActive;
         int index = button.transform.GetSiblingIndex();
-        for(int i=0; i<objectsToSwap.Count; i++) 
-        { 
-            if(i== index)
+        for (int i = 0; i < objectsToSwap.Count; i++)
+        {
+            if (i == index)
             {
                 objectsToSwap[i].SetActive(true);
             }
@@ -66,6 +80,14 @@ public class TabGroup : MonoBehaviour
             {
                 objectsToSwap[i].SetActive(false);
             }
+        } 
+
+        //allows swapping between skin and hair color
+        if(isColorTab == true)
+        {
+            tabName = selectedTab.name;
+            sceneManager.GetComponent<SceneScript>().SwapPartToColor(tabName);
+            
         }
     }
 
@@ -82,6 +104,11 @@ public class TabGroup : MonoBehaviour
             button.background.color = tabIdle;
         }
         
+    }
+    
+    public void getActiveTab(TabButton button)
+    {
+
     }
         
 }
