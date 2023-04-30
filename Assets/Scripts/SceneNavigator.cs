@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+public class SceneNavigator : MonoBehaviour
 {
     public void CreateCharacter()
     {
@@ -11,7 +11,11 @@ public class MainMenu : MonoBehaviour
     }
     public void Families()
     {
-        SceneManager.LoadScene("AaronsScene");
+        SceneManager.LoadScene("FamiliesScene");
+    }
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     public void Quit()
     {

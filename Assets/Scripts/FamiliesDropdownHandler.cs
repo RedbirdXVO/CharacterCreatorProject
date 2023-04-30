@@ -23,5 +23,6 @@ public class FamiliesDropdownHandler : MonoBehaviour
         {
             dropdown.options.Add(new TMP_Dropdown.OptionData() { text = item });
         }
+        dropdown.RefreshShownValue();
     }
 }
