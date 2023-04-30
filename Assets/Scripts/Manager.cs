@@ -19,6 +19,7 @@ public class Manager : MonoBehaviour
             families.AddFamily(family1);
             var family2 = new Family("Family2");
             families.AddFamily(family2);
+            DontDestroyOnLoad(this.gameObject);
         }
         else if (instance != this) Destroy(gameObject);
     }
