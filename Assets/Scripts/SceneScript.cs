@@ -12,7 +12,7 @@ public class SceneScript : MonoBehaviour
     void Start()
     {
         // test: was able to change obj to color through this line
-        objToColor = GameObject.Find("hairFront_1");
+        //objToColor = GameObject.Find("hairFront_1");
 
         playerScript = objToColor.GetComponent<PlayerScript>();
         Color startColor = playerScript.GetColor();
