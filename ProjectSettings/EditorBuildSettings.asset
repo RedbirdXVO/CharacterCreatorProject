@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AaronsScene.unity
     guid: 421d73ded39f43543bed0db07a660204
+  - enabled: 1
+    path: Assets/Scenes/FamiliesScene.unity
+    guid: 2d3c75103fc2e9e46a0572e21db70a55
   m_configObjects: {}
