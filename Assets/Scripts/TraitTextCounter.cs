@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class TraitTextCounter : MonoBehaviour
 {
-    [SerializeField] GameObject sceneManager;
+    GameObject sceneManager;
     TextMeshProUGUI traitTxt;
     string currentTraitCountTxt;
     // Start is called before the first frame update
     void Start()
     {
+        sceneManager = GameObject.Find("SceneManager");
         sceneManager.GetComponent<CharacterTraits>().GetActiveCharTraitList();
         traitTxt = gameObject.GetComponent<TextMeshProUGUI>();
     }

@@ -12,14 +12,18 @@ public class TraitButton : MonoBehaviour
 {
 
 
-    Image buttonImage;
-    bool buttonSelected = false;
-    public GameObject sceneManager;
-    public CharacterTraits characterTraits;
+    Image                   buttonImage;
+    bool                    buttonSelected      = false;
+
+    public GameObject       sceneManager;
+    public GameObject       traitButton;
+    public GameObject       totalTraitsText;
+
+    public CharacterTraits  characterTraits;
     public TraitTextCounter traitTextCounter;
 
-    public List<string> traitList= new List<string>();
-    public List<string> selectedTraits= new List<string>();
+    public List<string>     traitList           = new List<string>();
+    public List<string>     selectedTraits      = new List<string>();
 
 
     int buttonNum;
@@ -33,18 +37,13 @@ public class TraitButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttonImage = GetComponent<Button>().GetComponent<Image>();
-        sceneManager = GameObject.Find("SceneManager");
+        // Value Init -------------------------- //
+        traitButton = GameObject.Find("Toggle");
+        buttonImage = GetComponent<Button>().GetComponent<Image>(); // <--------    // Note: This line of code generates an error "NullReferenceException: Object reference not set to an instance of an object"
+        sceneManager = GameObject.Find("SceneManager");                             // It doesn't seem to break anything, and my attempts at fixing it have caused more issues than its worth. Leaving it for now.
+        totalTraitsText = GameObject.Find("Total Traits Text");
         characterTraits = sceneManager.GetComponent<CharacterTraits>();
-        traitTextCounter = sceneManager.GetComponent<TraitTextCounter>();
-
-      //  traitList = characterTraits.GetTraitList();
-
-
-     //   for (int i = 0; i < traitList.Count; i++)
-     //   {
-      //      Debug.Log(traitList[i]);
-     //   }
+        traitTextCounter = totalTraitsText.GetComponent<TraitTextCounter>();
 
     }
 
