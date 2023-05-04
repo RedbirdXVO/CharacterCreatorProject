@@ -14,6 +14,7 @@ public class Character
     public SpriteObject bodyTop;
 
     public Color bodyColor;
+    public Color hairColor;
 
     public string family;
 

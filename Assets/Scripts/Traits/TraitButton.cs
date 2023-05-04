@@ -27,13 +27,7 @@ public class TraitButton : MonoBehaviour
 
 
     int buttonNum;
-
-    //GameObject gameObject;
-
-
-
-    // test
-    int cnt = 0;
+    int cnt;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,8 +53,7 @@ public class TraitButton : MonoBehaviour
         if (buttonSelected)
         {
             cnt = characterTraits.GetActiveCharTraitCount();
-            //cnt = cnt + 1;
-            Debug.Log("Cnt: " + cnt.ToString());
+
             if (characterTraits.GetActiveCharTraitCount() >= characterTraits.GetMaxTraits()) { buttonSelected = !buttonSelected; }
             else 
             { 

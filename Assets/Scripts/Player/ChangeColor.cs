@@ -39,18 +39,9 @@ public class ChangeColor : MonoBehaviour
         red = rSlider.value;
         green = gSlider.value;
         blue = bSlider.value;
-        Debug.Log("Red: " + red + "Green" + green + "Blue: " + blue);
+        //Debug.Log("Red: " + red + "Green" + green + "Blue: " + blue);
         spriteRenderer.color = new Color(24,32,65,255);
 
-
-    }
-    void ChoosePartToColor()
-    {
-        
-    }
-
-    void SetColor()
-    {
 
     }
 }

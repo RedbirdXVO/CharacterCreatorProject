@@ -17,6 +17,7 @@ public class OptionsManager : MonoBehaviour
     public List<SpriteObject> optionsFace = new List<SpriteObject>();
     public List<SpriteObject> optionsHair = new List<SpriteObject>();
     public List<SpriteObject> optionsTop = new List<SpriteObject>();
+
     public int currentBaseOption = 0;
     public int currentBottomOption = 0;
     public int currentShoeOption = 0;
