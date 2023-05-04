@@ -10,9 +10,9 @@ public class TitleScreenTextAnim : MonoBehaviour
     public TMP_FontAsset titleFont;
     public Material titleFontMaterial;
     static float minGlow = 0.3f;
-    static float maxGlow = 0.9f;
+    static float maxGlow = 0.8f;
     TextMeshProUGUI titleObj;
-    float glowIncrement = 0.1f;
+    float glowIncrement = 0.15f;
     float glowCurrent;
     void Start()
     {
