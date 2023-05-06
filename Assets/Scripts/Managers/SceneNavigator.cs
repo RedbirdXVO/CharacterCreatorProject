@@ -7,7 +7,7 @@ public class SceneNavigator : MonoBehaviour
 {
     public void CreateCharacter()
     {
-        SceneManager.LoadScene("AaronsScene");
+        SceneManager.LoadScene("TestScene");
     }
     public void Families()
     {

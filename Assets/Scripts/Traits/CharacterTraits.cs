@@ -36,6 +36,14 @@ public class CharacterTraits : MonoBehaviour
     {
         GameObject traitsTextObj = GameObject.Find("Total Traits Text");
         traitTextCounter = traitsTextObj.GetComponent<TraitTextCounter>();
+        for (int i = 0; i < GameObject.Find("MenuBase").transform.childCount; i++)
+        {
+            var child = GameObject.Find("MenuBase").transform.GetChild(i);
+            if (child.name != "AppearancePage")
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame

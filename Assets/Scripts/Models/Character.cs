@@ -6,6 +6,8 @@ public class Character
 {
     public string characterName;
 
+    public List<string> traits;
+
     public SpriteObject bodyBase;
     public SpriteObject bodyBottom;
     public SpriteObject bodyShoe;
@@ -18,10 +20,13 @@ public class Character
 
     public string family;
 
-    public void SaveCharacter(string characterName, SpriteObject bodyBase, SpriteObject bodyBottom, SpriteObject bodyShoe, SpriteObject bodyFace, 
+    public void SaveCharacter(string characterName, List<string> traits, SpriteObject bodyBase, SpriteObject bodyBottom, SpriteObject bodyShoe, SpriteObject bodyFace, 
         SpriteObject bodyHair, SpriteObject bodyTop, Color bodyColor, string family)
     {
         this.characterName = characterName;
+
+        this.traits = traits;
+
         this.bodyBase = bodyBase;
         this.bodyBottom = bodyBottom;
         this.bodyShoe = bodyShoe;

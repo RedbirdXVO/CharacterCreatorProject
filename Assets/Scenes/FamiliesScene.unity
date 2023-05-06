@@ -1766,7 +1766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a06b6de374d99f543944ad8f530ac4b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1131404362}
+  objToColor: {fileID: 1131404362}
   colors:
   - 0
   - 0
