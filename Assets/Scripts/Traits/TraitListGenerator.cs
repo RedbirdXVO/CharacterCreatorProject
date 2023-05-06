@@ -18,7 +18,7 @@ public class TraitListGenerator : MonoBehaviour
     {
 
         //Obj Init////////////////////////
-        traitList = GameObject.Find("Rows");
+        traitList = GameObject.Find("TraitRows");
         sceneManager = GameObject.Find("SceneManager");
         characterTraits = sceneManager.GetComponent<CharacterTraits>();
 
