@@ -8,14 +8,13 @@ public class CharacterSave : MonoBehaviour
     public void SaveCharacter()
     {
         var outfitChanger = GameObject.Find("Player").GetComponent<OptionsManager>();
-        var name = GameObject.Find("NameField").GetComponent<TMP_InputField>().text;
         var familyname = "Family1";//GameObject.Find("FamilyDropdown").GetComponent<TMP_Dropdown>().options[GameObject.Find("FamilyDropdown").GetComponent<TMP_Dropdown>().value].text;
         var skintone = GameObject.Find("baseFront").GetComponent<PlayerScript>().GetColor();
         var haircolor = GameObject.Find("hairFront_1").GetComponent<PlayerScript>().GetColor();
         var traits = GameObject.Find("SceneManager").GetComponent<CharacterTraits>().GetActiveCharTraitList();
         var character = new Character()
         {
-            characterName = name,
+            characterName = outfitChanger.name,
 
             bodyBase = outfitChanger.optionsBase[outfitChanger.currentBaseOption],
             bodyBottom = outfitChanger.optionsBottom[outfitChanger.currentBottomOption],
