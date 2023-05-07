@@ -35,6 +35,10 @@ public class CharactersMenuManager : MonoBehaviour
     {
         GameObject.Find("NamePlate").transform.Find("Text (TMP)").GetComponent<TMP_Text>().text = character.characterName;
         GameObject g = GameObject.Find("CurrentCharacter").gameObject;
+        GameObject traitTxtObj = GameObject.Find("TraitPanelText");
+        string traitTxt = "";
+
+        
         g.transform.Find("base").GetComponent<SpriteRenderer>().sprite = character.bodyBase.Front;
         g.transform.Find("base").GetComponent<SpriteRenderer>().color = character.bodyColor;
         g.transform.Find("bottom").GetComponent<SpriteRenderer>().sprite = character.bodyBottom.Front;
@@ -42,5 +46,14 @@ public class CharactersMenuManager : MonoBehaviour
         g.transform.Find("face").GetComponent<SpriteRenderer>().sprite = character.bodyFace.Front;
         g.transform.Find("hair").GetComponent<SpriteRenderer>().sprite = character.bodyHair.Front;
         g.transform.Find("top").GetComponent<SpriteRenderer>().sprite = character.bodyTop.Front;
+        
+        for(int i=0; i <= character.traits.Count - 1; i++){
+            traitTxt += "" + character.traits[i] + "\n";
+        }
+        traitTxtObj.GetComponent<TextMeshProUGUI>().text = traitTxt;
+
+
     }
+
+    //string WriteTrait()
 }
