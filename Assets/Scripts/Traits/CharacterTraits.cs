@@ -16,8 +16,6 @@ public class CharacterTraits : MonoBehaviour
                             "Ambitious",
                             "Grumpy" };
 
-
-
     public List<string> activeCharTraits = new List<string>();
     string traitToAdd;
 
@@ -25,12 +23,6 @@ public class CharacterTraits : MonoBehaviour
     TraitTextCounter traitTextCounter;
 
     int maxTraits = 3;
-
-
-
-
-
-
 
     // Start is called before the first frame update
     void Start()

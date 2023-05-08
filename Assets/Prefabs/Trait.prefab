@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5888166233329101037}
   - component: {fileID: 5888166233329101024}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: TraitToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c55001ab9956f53429a860772c29f4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneManager: {fileID: 0}
+  traitButton: {fileID: 0}
+  totalTraitsText: {fileID: 0}
   characterTraits: {fileID: 0}
+  traitTextCounter: {fileID: 0}
   traitList: []
   selectedTraits: []
 --- !u!1 &5888166233457232953

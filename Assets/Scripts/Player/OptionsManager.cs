@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class OptionsManager : MonoBehaviour
 {
+    public string name;
     public SpriteRenderer bodyBase;
     public SpriteRenderer bodyBottom;
     public SpriteRenderer bodyShoe;
@@ -164,7 +166,10 @@ public class OptionsManager : MonoBehaviour
         bodyHair.sprite = optionsHair[currentHairOption].GetSprite(currentDirection);
         bodyTop.sprite = optionsTop[currentTopOption].GetSprite(currentDirection); ;
     }
-
+    public void SetName()
+    {
+        name = GameObject.Find("NameField").GetComponent<TMP_InputField>().text;
+    }
 }
 
 

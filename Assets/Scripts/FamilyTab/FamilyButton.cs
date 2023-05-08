@@ -8,22 +8,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static UnityEngine.ParticleSystem;
 
-public class TraitButton : MonoBehaviour
+public class FamilyButton : MonoBehaviour
 {
-
-
     Image buttonImage;
     bool buttonSelected = false;
 
     public GameObject sceneManager;
-    public GameObject traitButton;
-    public GameObject totalTraitsText;
+    public GameObject familyButton;
+    //public GameObject totalTraitsText;
 
-    public CharacterTraits characterTraits;
-    public TraitTextCounter traitTextCounter;
+    public CharacterFamily characterFamily;
+   // public TraitTextCounter traitTextCounter;
 
-    public List<string> traitList = new List<string>();
-    public List<string> selectedTraits = new List<string>();
+    //public List<string> traitList = new List<string>();
+    //public List<string> selectedTraits = new List<string>();
 
 
     int buttonNum;
@@ -32,44 +30,36 @@ public class TraitButton : MonoBehaviour
     void Start()
     {
         // Value Init -------------------------- //
-        traitButton = GameObject.Find("TraitToggle");
+        familyButton = GameObject.Find("Toggle");
         buttonImage = GetComponent<Button>().GetComponent<Image>(); // <--------    // Note: This line of code generates an error "NullReferenceException: Object reference not set to an instance of an object"
         sceneManager = GameObject.Find("SceneManager");                             // It doesn't seem to break anything, and my attempts at fixing it have caused more issues than its worth. Leaving it for now.
-        totalTraitsText = GameObject.Find("Total Traits Text");
-        characterTraits = sceneManager.GetComponent<CharacterTraits>();
-        traitTextCounter = totalTraitsText.GetComponent<TraitTextCounter>();
+        characterFamily = sceneManager.GetComponent<CharacterFamily>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void ButtonSelected()
     {
-        
-        buttonSelected = !buttonSelected;
-        if (buttonSelected)
+        if (!buttonSelected && characterFamily.activeFamily == "")
         {
-            cnt = characterTraits.GetActiveCharTraitCount();
-
-            if (characterTraits.GetActiveCharTraitCount() >= characterTraits.GetMaxTraits()) { buttonSelected = !buttonSelected; }
-            else 
-            { 
-                buttonImage.color = Color.gray;
-            }
-            
+            buttonSelected = true;
+            buttonImage.color = Color.gray;
+            characterFamily.SetActiveFamily(buttonNum);
+            characterFamily.GetActiveFamily();
         }
-        else
+        else if(buttonSelected)
         {
+            buttonSelected = false;
             buttonImage.color = Color.white;
+            characterFamily.SetActiveFamilyNull();
+            characterFamily.GetActiveFamily();
         }
-        characterTraits.SetActiveCharTraitList(buttonNum);
-        characterTraits.GetActiveCharTraitList();
         
     }
-
     public void SetButtonNum(int num)
     {
         buttonNum = num;
