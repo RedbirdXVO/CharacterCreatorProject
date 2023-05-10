@@ -97,7 +97,7 @@ public class OutfitChanger : MonoBehaviour
         {
             currentShoeOption = optionsShoe.Count - 1;
         }
-        bodyShoe.sprite = optionsBottom[currentShoeOption].GetSprite(currentDirection);
+        bodyShoe.sprite = optionsShoe[currentShoeOption].GetSprite(currentDirection);
     }
     public void NextBottomOption()
     {
@@ -136,7 +136,7 @@ public class OutfitChanger : MonoBehaviour
         bodyBase.sprite = optionsBase[currentBaseOption].GetSprite(currentDirection);
     }
 
-    public void RotateLeftOption()
+    public void RotateRightOption()
     {
         currentDirection--;
         if (currentDirection < 0)
@@ -150,7 +150,7 @@ public class OutfitChanger : MonoBehaviour
         bodyHair.sprite = optionsHair[currentHairOption].GetSprite(currentDirection);
         bodyTop.sprite = optionsTop[currentTopOption].GetSprite(currentDirection);
     }
-    public void RotateRightOption()
+    public void RotateLeftOption()
     {
         currentDirection++;
         if (currentDirection >= directions.Length)
