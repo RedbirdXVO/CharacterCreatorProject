@@ -41,6 +41,7 @@ public class CharactersMenuManager : MonoBehaviour
         g.transform.Find("shoe").GetComponent<SpriteRenderer>().sprite = character.bodyShoe.Front;
         g.transform.Find("face").GetComponent<SpriteRenderer>().sprite = character.bodyFace.Front;
         g.transform.Find("hair").GetComponent<SpriteRenderer>().sprite = character.bodyHair.Front;
+        g.transform.Find("hair").GetComponent<SpriteRenderer>().color = character.hairColor;
         g.transform.Find("top").GetComponent<SpriteRenderer>().sprite = character.bodyTop.Front;
     }
 }
