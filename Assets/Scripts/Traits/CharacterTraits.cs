@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEngine.ParticleSystem;
 
+
 public class CharacterTraits : MonoBehaviour
 {
 
